@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*********CSS root*******/
+:root{
+--background-color:#21042e;
+--background-transparent:rgba(255,255,255,0);
+--background-glass:rgba(182, 182, 182, 0.2);
+--background-scrollbar:#ffc2e5;
+--background-containers:linear-gradient(white, white) padding-box,
+linear-gradient(to left, #730c8d, #f11090, #730c8d) border-box;
+--border-containers: 4px solid transparent;
+--nav-font-color:#f11090;
+--text-shadow:0 0 4px #730c8d,0 0 50px #730c8d,0px 0px 14px #f11090; color:#21042e;
+--font-color-containers:#21042e;
+--font-color-contact:white;
+--border-radius:30px;
+--border-checkbox:#ffc2e5;
+--cursor-checkbox: white;
+--checked-checkbox:#ffc2e5;
+--checked-cursor: white;
+}
+
+/********Principal page********/
+*{
+  box-sizing: border-box;
+}
+
+html, body {
+  background-image:url("./images/background/background.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  background-color: var(--background-color);
+  width:100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  }
+
+
+/*******Titles*******/
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+h1:hover{
+  transform:scale(1.1);
+  text-shadow:0 0 4px #730c8d,0 0 50px #730c8d,0px 0px 14px #f11090; color:#21042e;
+}
+
+h2{
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing:3px;
+  margin:10px;
+  color: #ffc2e5;
+}
+
+h2::before,
+h2::after{
+  content:"\002015";
+  width:2rem;
+  display:inline-block;
+  vertical-align:middle;
+}
+
+h2::before{
+  margin-left:-50%;
+  margin-right:1em;
+}
+
+h2::after{
+  margin-right:-50%;
+margin-left:1em;;
+}
+
+h2:hover{
+  transform:scale(1.1);
+  text-shadow:0 0 4px #730c8d,0 0 50px #730c8d,0px 0px 14px #f11090; color:#21042e;
+}
+
+h3{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/*******Scrollbar******/
+::-webkit-scrollbar {
+  height: 12px;
+  width: 8px;
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background:var(--background-scrollbar);
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+}
+
+/*******logo & header*******/
+.logo{
+margin:auto;
+}
+
+  /*******Main containers******/
+.firstContainer{
+  display:flex;
+  justify-content: center;
+}
+
+/*******Product, documentation, contact, team containers pages********/
+.productContainer, .documentationContainer, .contactContainer, .teamContainer {
+  width:90%;
+  border: var(--border-containers);
+  backdrop-filter: blur(15px);
+  background-color: var(--background-glass);
+  border-radius: 30px;
+  color:var(--font-color-contact);
+  text-align: center;
+  margin:auto;
+  margin-top:20px;
+}
+
+/*********FOOTER********/
+.footer{
+  width:90%;
+  color: var(--font-color-contact);
+  display: flex;
+  flex-direction: inline;
+  margin:auto;
+  justify-content:center;
+  text-align:center;
+}
+
+.componentFooter{
+  margin: 20px;
+}
+
+.aboutContainer{
+  width:30%;
+  text-align:justify;
+}
+
+.followContainer{
+width:30%;
+display:flex;
+flex-direction: column;
+align-items: center;
+}
+
+.followImage{
+ width:50px;
+ height:50px;
+ margin:10px;
+}
+
+.followImage:hover{
+  transform:scale(1.4);
+}
+
+.legalTitle,
+.privacyTitle{
+text-decoration: underline;
+}
+
+.legalContainer{
+  width:30%;
+}
+
+/********Privacy & legal notice*******/
+.privacyContainer{
+  width:90%;
+  padding:20px;
+  background: var(--background-containers);
+  border-radius: 30px;
+  border: var(--border-containers);
+  border-radius: var(--border-radius);
+  color:var(--font-color-containers);
+}
+
+.privacyContainer h1{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.privacyContainer h2{
+  text-decoration: underline;
+  font-size: 20px;
+  margin: 20px;
+  font-weight: 700;
+}
+
+.privacyContainer p, ul, li{
+  line-height: 30px;
+  margin: 5px;
+}
+
+/*********ERROR 404*****/
+.errorContainer{
+  height:500px;
+  background-color: var(--background-color);
+  text-shadow:0 0 4px #ffc2e5,0 0 50px #ffc2e5,0px 0px 14px #f11090; color:#ffc2e5;
+  text-align: center;
+  font-size: 50px;
+  padding-top:100px;
+}
+
+.errorLink{
+  text-decoration: underline;
+}
+
+/********Responsive*******/
+@media only screen and (max-width: 600px) {
+  /*******Titles*******/
+ h1{
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px;
+ }
+ 
+  h2{
+  font-weight: 500;
+  font-size: 12px;
+ }
+
+ h3{
+  font-weight: 300;
+  font-size: 11px;
+}
+
+/*******Logo*******/
+.logo{
+  width:30%;
+}
+
+/********Containers******/
+.firstContainer{
+  display:flex;
+  flex-direction: column;
+}
+
+.leftContainerDocumentation, .rightContainerDocumentation{
+  width:90%;
+  margin:5px auto;
+  font-size:12px;
+}
+
+/*******Footer********/
+.aboutParaph{
+  font-size:10px;
+  overflow-y:scroll;
+  max-height: 120px;
+}
+
+.followImage{
+  width:30px;
+  height:30px;
+  margin:10px;
+ }
+
+ .errorContainer{
+  font-size: 30px;
+ }
+}
+
+/* Styles pour les écrans moyens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  /*******Titles*******/
+  h1{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  h2{
+    font-weight: 500;
+    font-size: 18px;
+   }
+  
+   h2{
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  h2::before,
+  h2::after{
+    width:1rem;
+}
+
+/*********Logo********/
+.logo{
+  width:50%;
+}
+
+/********Containers*******/
+  .leftContainerDocumentation, .rightContainerDocumentation{
+    font-size:12px;
+  }
+
+  /*******Footer******/
+  .aboutParaph{
+    font-size:12px;
+    overflow-y:scroll;
+    max-height: 120px;
+  }
+
+  .followImage{
+    width:35px;
+    height:35px;
+    margin:10px;
+   }
+
+  /*****Privacy*****/
+  .privacyContainer{
+    margin:auto;
+  }
+
+  .privacyContainer h1{
+    font-size: 20px;
+  }
+
+  .privacyContainer p{
+    font-size: 15px;
+  }
+}
+  @media only screen and (min-width: 901px) and (max-width: 1279px) {
+    h1{
+      font-size: 25px;
+      font-weight: 500;
+    }
+  }

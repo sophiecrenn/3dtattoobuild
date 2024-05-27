@@ -1,0 +1,178 @@
+/********Cookie banner*********/
+
+.cookieBanner{
+    font-weight: bold;
+    position: fixed;
+    width:60%;
+    bottom: 10px;
+    right: 5%; /* Déplacez la bannière dans la vue */
+  }
+  
+  .cookieLogo2{
+    transform:scaleX(-1);
+  }
+  
+  .cookieContent {
+    background-color:#21042e;
+    border:1px solid black;
+    border-radius: 20px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    color:#ffc2e5;
+  }
+  
+  #cookieParaph{
+    font-size:14px;
+  }
+  
+  .showCookie{
+    text-decoration: underline;
+  }
+  
+  .cookieButtons{
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .cookieButton{
+    margin:10px;
+    padding:10px;
+    width:250px;
+    border: 1px solid ;
+    border-radius:20px;
+    text-align: center;
+  }
+  
+  .cookieAccept{
+    background-color:#f11090;
+    color:var(--background-scrollbar);
+  }
+  
+  .cookieAccept:hover{
+    transform:scale(1.1);
+    box-shadow:var(--text-shadow);
+  }
+  
+  .cookieReject{
+    font-size:12px;
+  }
+
+   /********Responsive*******/
+@media only screen and (max-width: 600px) {
+     /*******Cookies******/
+     .cookieBanner{
+      bottom:5px;
+      width:200px;
+    }
+  
+    .cookieLogo, .cookieLogo2{
+      width:30px;
+      margin-top:5px;
+    }
+  
+    .cookieContent{
+      flex-direction: column;
+    }
+  
+    #cookieParaph{
+      font-size: 9px;
+      font-weight:none;
+      margin:10px;
+    }
+  
+    .cookieButtons{
+      font-size:9px;
+      flex-direction: column;
+    }
+  
+    .cookieButton{
+      width:100px;
+      margin:2px;
+      padding:5px;
+    }
+
+    .cookieReject{
+      font-size:8px;
+    }
+  }
+
+  /* Styles pour les écrans moyens */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+
+  .cookieBanner{
+    bottom:5px;
+    width:400px;
+  }
+
+  .cookieLogo, .cookieLogo2{
+    width:80px;
+    padding:15px;
+    margin:-10px;
+  }
+
+  .cookieContent{
+    flex-direction: column;
+  }
+
+  #cookieParaph{
+    font-size: 12px;
+    font-weight:none;
+    margin:10px;
+  }
+
+  .cookieButtons{
+    font-size:13px;
+    flex-direction: column;
+  }
+
+  .cookieButton{
+    width:200px;
+    margin:2px;
+    padding:5px;
+  }
+
+  .cookieReject{
+    font-size:11px;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1279px) {
+
+  .cookieBanner{
+    width:400px;
+    bottom:5px;
+  }
+
+  .cookieLogo, .cookieLogo2{
+    width:100px;
+    padding:15px;
+    margin:-10px;
+  }
+
+  .cookieContent{
+    flex-direction: column;
+  }
+
+  #cookieParaph{
+    font-size: 12px;
+    font-weight:none;
+    margin:10px;
+  }
+
+  .cookieButtons{
+    font-size:13px;
+    flex-direction: column;
+  }
+
+  .cookieButton{
+    width:200px;
+    margin:2px;
+    padding:5px;
+  }
+
+  .cookieReject{
+    font-size:11px;
+  }
+}

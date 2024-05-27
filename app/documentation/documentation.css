@@ -1,0 +1,74 @@
+/********Documentation*********/
+.documentationContainer{
+    overflow:hidden;
+  }
+  
+  #frenchButton, #englishButton{
+    width:200px;
+    height:auto;
+    background:#21042e;
+    padding:20px;
+    margin:20px 20px 50px 20px;
+    text-align: center;
+    border-radius:30px;
+    box-shadow: 0px 0px 5px 5px #730c8d;
+    font-size:18px;
+  }
+  
+  #frenchButton:hover, #englishButton:hover{
+    transform:scale(1.1);
+    text-shadow:0 0 4px #730c8d,0 0 50px #730c8d,0px 0px 14px #f11090; color:#ffc2e5;
+  }
+  
+  .leftContainerDocumentation{
+    margin:-20px;
+    margin-left: 10px;
+  }
+  
+  .rightContainerDocumentation{
+    margin-right:10px;
+  }
+  
+  #documentationP{
+    margin:20px;
+  }
+  
+  .diapoDocR, .diapoDocL{
+    border-radius:30px;
+    box-shadow: 0px 0px 5px 5px #730c8d;
+  }
+  
+  
+  .diapoArrowL{
+  margin-left:100px;
+  }
+  
+  #lastDiapo{
+    margin-bottom:30px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    /*******Documentation *******/
+#documentationP{
+  margin-bottom:0px;
+  }
+  
+  .diapoArrow{
+    display:none;
+  }
+  
+  .diapoDocR, .diapoDocL{
+    margin-top:10px;
+  }
+  }  
+
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+      /********Documentation******/
+  .diapoDocR, .diapoDocL{
+    margin-top:-30px;
+  }
+
+  .diapoArrow{
+    margin:-40px;
+  }
+}

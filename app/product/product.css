@@ -1,0 +1,13 @@
+/********Product*********/
+.firstContainerProduct{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .banniere{
+    border-radius:30px;
+    box-shadow: 0px 0px 5px 5px #730c8d;
+    margin-bottom:10px;
+  }
+  
