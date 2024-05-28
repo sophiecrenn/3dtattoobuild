@@ -1,4 +1,3 @@
-'use client'
 
 import Image from "next/image";
 import Diapo1 from "@/app/images/documentation/french/1.svg";
