@@ -4,8 +4,14 @@ import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import './documentation.css';
 
-const FrenchDocumentation = dynamic(() => import('./French'));
-const EnglishDocumentation = dynamic(() => import('./English'));
+const FrenchDocumentation = dynamic(() => import('./French'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false, // désactiver le rendu côté serveur pour les imports dynamiques
+});
+const EnglishDocumentation = dynamic(() => import('./English'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 export default function Documentation() {
   const [showCards, setShowCards] = useState(false);
